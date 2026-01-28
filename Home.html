@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dominic EA Tech Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- INTRO -->
+<div id="intro">
+  <h1 id="intro-text">Welcome</h1> 
+</div>
+
+<!-- MAIN -->
+<div id="main">
+
+<header class="hero">
+  <h1>Dominic EA Tech Hub</h1>
+  <p>Web & Mobile Solutions for Modern Businesses and Personal blogs</p>
+  <div class="hero-buttons">
+    <a href="#contact" class="btn primary">Begin your Inquiry</a>
+    <a href="#services" class="btn secondary">Our Services</a>
+  </div>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#process">Process</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about" class="section">
+  <h2>About</h2>
+  <div class="about-box">
+    <img src="images/Image ve.jpeg">
+    <p>
+      Dominic EA Tech Hub is a tech brand focused on building
+      professional websites and mobile applications. We design and build custom websites and mobile apps that help creators, businesses and schools grow and sell online. Our mission is
+      to help ideas become real digital products, fast and efficiently at low cost but premium quality.
+    </p> 
+    <p> Contact us today to start your project, Your satisfaction is our priority.</p>
+  </div>
+</section>
+
+<section id="services" class="section alt">
+  <h2>Services</h2>
+  <div class="grid">
+    <div class="card">Website Development</div>
+    <div class="card">Mobile App Development</div>
+    <div class="card">UI/UX Design</div>
+    <div class="card">Redesign & Maintenance</div>
+  </div>
+</section>
+
+<!-- display grid -->
+<section id="process" class="section">
+  <h2>How We Work</h2>
+
+  <div class="process-grid">
+    <div class="process-card">
+      <h3>Consultation</h3>
+      <p>We understand your goals, ideas, and target audience.</p>
+    </div>
+
+    <div class="process-card">
+      <h3>Design</h3>
+      <p>We craft modern, user-friendly UI/UX designs.</p>
+    </div>
+
+    <div class="process-card">
+      <h3>Development</h3>
+      <p>We build fast, scalable and secure solutions.</p>
+    </div>
+
+    <div class="process-card">
+      <h3>Testing</h3>
+      <p>We test across devices for performance and quality.</p>
+    </div>
+
+    <div class="process-card">
+      <h3>Launch</h3>
+      <p>Your product goes live with full support.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- PORTFOLIO SLIDER -->
+<section id="portfolio" class="section alt">
+  <h2>Our Projects</h2>
+
+  <div class="slider">
+    <button class="slide-btn" onclick="prevSlide()">❮</button>
+
+    <div class="slides">
+      <div class="slide">
+        <img src="images/Personal blog.jpeg">
+        <h4>Personal Websites</h4>
+        <small> Author / writers websites</small> <br>
+        <small> Personal Blogs</small> <br>
+        <small> Many More!!</small>
+
+      </div>
+      <div class="slide">
+        <img src="images/project 2.jpeg">
+        <h4>Mobile App</h4>
+      </div>
+
+      
+      </div>
+      <div class="slide">
+        <img src="images/business.jpeg">
+        <h4>Mobile App</h4>
+      </div>
+
+      <div class="slide">
+        <img src="images/School.jpeg">
+        <h4>School Systems</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2>Let's Connect</h2>
+
+  <form class="form" action="https://formsubmit.co/dominicelijah835@gmail.com" method="POST">
+    <!-- Hidden input to prevent spam -->
+    <input type="hidden" name="_captcha" value="false">
+
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Describe your project or idea" required></textarea>
+    <button type="submit" class="primary">Send Message</button>
+  </form>
+  <p>Follow us on social media</p>
+  <div class="socials">
+    <a href="https://www.instagram.com/ea_dominic?igsh=cXczMTUxc3l4Nnhy" target="_blank">Instagram</a>
+    <a href="https://x.com/elijah_dom28623" target="_blank">X</a>
+    <a href="https://www.facebook.com/dominic.ea.2025" target="_blank">Facebook</a>
+    <a href="https://vm.tiktok.com/ZS91e8Mk7MaAn-ltdTX/" target="_blank">TikTok</a>
+    <a href="https://wa.me/+2347039074576" target="_blank">WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Dominic EATech Hub</p>
+</footer>
+
+</div>
+
+<!-- EMAILJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("");
+  })();
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
