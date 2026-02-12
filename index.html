@@ -4,13 +4,28 @@
   <meta charset="UTF-8">
   <title>Dominic EA Tech Hub</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; default-src 'self' https:; script-src 'self' https: 'unsafe-inline'; style-src 'self' https: 'unsafe-inline'">
+  <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- INTRO -->
 <div id="intro">
-  <h1 id="intro-text">Welcome</h1> 
+  <div class="intro-container">
+    <img src="images/Image ve.jpeg" class="intro-image" alt="Intro Image">
+    <h1 id="intro-text">Dominic EA Tech Hub    <form class="form" id="contactForm" action="https://formspree.io/f/xdaladgg" method="POST"></form></h1>
+    <div class="intro-subtitle" id="intro-subtitle"></div>
+    <div class="intro-loader">
+      <div class="loader-dot"></div>
+      <div class="loader-dot"></div>
+      <div class="loader-dot"></div>
+    </div>
+  </div>
 </div>
 
 <!-- MAIN -->
@@ -25,12 +40,19 @@
   </div>
 </header>
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#process">Process</a>
-  <a href="#portfolio">Portfolio</a>
-  <a href="#contact">Contact</a>
+<nav class="navbar">
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="nav-menu" id="navMenu">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#process">Process</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
 <section id="about" class="section">
@@ -48,11 +70,12 @@
 
 <section id="services" class="section alt">
   <h2>Services</h2>
+  <p> Click on the card for more details</p>
   <div class="grid">
-    <div class="card">Website Development</div>
-    <div class="card">Mobile App Development</div>
-    <div class="card">UI/UX Design</div>
-    <div class="card">Redesign & Maintenance</div>
+    <a href="service-web-development.html" class="card">Website Development</a>
+    <a href="service-mobile-app.html" class="card">Mobile App Development</a>
+    <a href="service-ui-ux.html" class="card">UI/UX Design</a>
+    <a href="service-maintenance.html" class="card">Redesign & Maintenance</a>
   </div>
 </section>
 
@@ -127,24 +150,61 @@
 
 <!-- CONTACT -->
 <section id="contact" class="section">
-  <h2>Let's Connect</h2>
+  <h2>Request a Quote!</h2>
 
-  <form class="form" action="https://formsubmit.co/dominicelijah835@gmail.com" method="POST">
-    <!-- Hidden input to prevent spam -->
+  <form class="form" id="contactForm" action="https://formspree.io/f/mnjbjzvq" method="POST">
+    <!-- FormSubmit Configuration -->
     <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://yourdomain.com/success">
+    <input type="hidden" name="subject" value="New Project Inquiry from EA Tech Hub">
+    
+    <!-- Security: Honeypot field (hidden from users, catches bots) -->
+    <input type="text" name="website" placeholder="Website" style="display:none; position:absolute; left:-9999px;">
+    
+    <!-- CSRF Token -->
+    <input type="hidden" name="_csrf" value="ea-tech-hub-2026">
 
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Describe your project or idea" required></textarea>
-    <button type="submit" class="primary">Send Message</button>
+    <div class="form-row">
+      <input type="text" name="name" placeholder="Your Name" minlength="2" maxlength="100" required>
+      <input type="email" name="email" placeholder="Your Email" maxlength="254" required>
+    </div>
+    <textarea name="message" placeholder="Describe your project or idea" minlength="10" maxlength="1000" required></textarea>
+    <button type="submit" class="primary" id="submitBtn">Submit</button>
   </form>
+
+  <div id="successMessage" class="success-message">
+    <h3>✓ Your Request has been submitted</h3>
+    <p>The team will back to you</p>
+  </div>
+<section class="location-section">
+  <div class="location-card">
+    
+    <div class="location-text">
+      <h3>📍 Our Location</h3>
+      <p>Dominic EA Tech Hub</p>
+      <p> Faculty of Computing</p>
+      <p>University of Calabar</p>
+      <p>Cross Rivers State, Nigeria</p>
+    </div>
+<div class="location-map">
+  <iframe
+    src="https://www.google.com/maps?q=University%20of%20Calabar,%20Cross%20River,%20Nigeria&output=embed"
+    style="width:100%; height:220px; border:0; border-radius:15px;"
+    loading="lazy">
+  </iframe>
+</div>
+
+
+  </div>
+</section>
+<br>
   <p>Follow us on social media</p>
   <div class="socials">
-    <a href="https://www.instagram.com/ea_dominic?igsh=cXczMTUxc3l4Nnhy" target="_blank">Instagram</a>
-    <a href="https://x.com/elijah_dom28623" target="_blank">X</a>
-    <a href="https://www.facebook.com/dominic.ea.2025" target="_blank">Facebook</a>
-    <a href="https://vm.tiktok.com/ZS91e8Mk7MaAn-ltdTX/" target="_blank">TikTok</a>
-    <a href="https://wa.me/+2347039074576" target="_blank">WhatsApp</a>
+    <a href="https://www.instagram.com/ea_dominic?igsh=cXczMTUxc3l4Nnhy" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="https://x.com/elijah_dom28623" target="_blank" rel="noopener noreferrer">X</a>
+    <a href="https://www.facebook.com/dominic.ea.2025" target="_blank" rel="noopener noreferrer">Facebook</a>
+    <a href="https://vm.tiktok.com/ZS91e8Mk7MaAn-ltdTX/" target="_blank" rel="noopener noreferrer">TikTok</a>
+    <a href="javascript:void(0);" id="whatsappLink" rel="noopener noreferrer">WhatsApp</a>
   </div>
 </section>
 
@@ -154,15 +214,6 @@
 
 </div>
 
-<!-- EMAILJS -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-  (function(){
-    emailjs.init("");
-  })();
-</script>
-
 <script src="script.js"></script>
 </body>
 </html>
-
