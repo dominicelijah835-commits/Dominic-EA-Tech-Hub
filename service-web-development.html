@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Website Development – Dominic EA Tech Hub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+  --primary: #00d9ff;
+  --secondary: #6366f1;
+  --accent: #22c55e;
+  --bg: #050814;
+  --card: rgba(255,255,255,0.04);
+  --border: rgba(255,255,255,0.1);
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --radius: 14px;
+}
+
+/* Base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background:
+    radial-gradient(circle at top, rgba(0,217,255,0.12), transparent 40%),
+    var(--bg);
+  font-family: "Inter","Segoe UI",sans-serif;
+  color: var(--text);
+}
+
+/* Layout */
+.service-page {
+  max-width: 1150px;
+  margin: auto;
+  padding: 90px 20px 60px;
+}
+
+/* Back */
+.back-link {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 10px 18px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  color: var(--primary);
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+}
+
+.back-link:hover { background: rgba(255,255,255,0.08); }
+
+/* Hero */
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(90deg,var(--primary),var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  max-width: 750px;
+  margin: 20px 0 60px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+/* Sections */
+.service-section {
+  background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 40px;
+  margin-bottom: 35px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.service-section h3 {
+  color: var(--primary);
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.service-section p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* Grid */
+.service-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 22px;
+  margin-top: 25px;
+}
+
+.feature-box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 25px;
+  transition: 0.4s;
+}
+
+.feature-box:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary);
+}
+
+.feature-box h4 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+/* Lists */
+ul { margin-top: 20px; padding-left: 20px; }
+li { margin-bottom: 10px; color: var(--muted); }
+
+/* CTA */
+.cta {
+  text-align: center;
+  padding: 80px 30px;
+  background: linear-gradient(180deg, rgba(0,217,255,0.12), rgba(0,0,0,0.4));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.cta h3 { font-size: 2rem; color: var(--primary); }
+.cta p { color: var(--muted); margin: 15px 0 30px; }
+
+.cta-button {
+  background: linear-gradient(135deg,var(--primary),var(--secondary));
+  padding: 16px 45px;
+  border-radius: 40px;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  transition: 0.4s;
+}
+
+.cta-button:hover {
+  box-shadow: 0 0 40px rgba(0,217,255,0.6);
+  transform: scale(1.05);
+}
+
+/* Mobile */
+@media(max-width:768px){
+  h1{font-size:2.2rem;}
+  .service-section{padding:25px;}
+}
+</style>
+</head>
+
+<body>
+
+<a href="Home.html" class="back-link">← Home</a>
+
+<div class="service-page">
+
+<h1>Website Development</h1>
+<p class="subtitle">
+We build fast, secure and visually stunning websites that help businesses, creators and brands grow online.
+</p>
+
+<div class="service-section">
+<h3>What We Do</h3>
+<p>
+At Dominic EA Tech Hub, we design and develop professional websites that are optimized for performance, user experience and business success. 
+From simple personal blogs to complex content platforms, we deliver modern web solutions that scale.
+</p>
+</div>
+
+<div class="service-section">
+<h3>Websites We Have Built</h3>
+<div class="service-features">
+  <div class="feature-box"><h4>Personal Blogs</h4><p>Clean and professional blogging platforms for writers and creators.</p></div>
+  <div class="feature-box"><h4>Movie Streaming Sites</h4><p>Modern video-based platforms with fast content delivery.</p></div>
+  <div class="feature-box"><h4>E-Book Websites</h4><p>Digital libraries for selling and sharing books online.</p></div>
+  <div class="feature-box"><h4>Music Platforms</h4><p>Websites for hosting, streaming and selling music.</p></div>
+  <div class="feature-box"><h4>Business Websites</h4><p>Corporate and startup websites built for credibility.</p></div>
+  <div class="feature-box"><h4>And Many More</h4><p>Custom web platforms tailored to client needs.</p></div>
+</div>
+</div>
+
+<div class="service-section">
+<h3>Our Development Process</h3>
+<div class="service-features">
+  <div class="feature-box"><h4>Planning</h4><p>Understanding your goals and audience.</p></div>
+  <div class="feature-box"><h4>UI/UX Design</h4><p>Designing clean, user-friendly layouts.</p></div>
+  <div class="feature-box"><h4>Development</h4><p>Building fast, secure and scalable websites.</p></div>
+  <div class="feature-box"><h4>Launch</h4><p>Deploying and optimizing your website.</p></div>
+</div>
+</div>
+
+<div class="service-section">
+<h3>Why Choose Dominic EA Tech Hub?</h3>
+<ul>
+<li>Modern UI/UX and professional design</li>
+<li>SEO-friendly and mobile-responsive websites</li>
+<li>High-speed performance and security</li>
+<li>Affordable pricing with premium quality</li>
+<li>Long-term maintenance and support</li>
+</ul>
+</div>
+
+<div class="cta">
+<h3>Ready to Build Your Website?</h3>
+<p>Let’s create a powerful online presence for your brand.</p>
+<a href="Home.html#contact" class="cta-button">Start Your Project</a>
+</div>
+
+</div>
+
+</body>
+</html>

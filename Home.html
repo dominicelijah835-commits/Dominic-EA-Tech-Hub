@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dominic EA Tech Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; default-src 'self' https:; script-src 'self' https: 'unsafe-inline'; style-src 'self' https: 'unsafe-inline'">
+  <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- INTRO -->
+<div id="intro">
+  <div class="intro-container">
+    <img src="images/Image ve.jpeg" class="intro-image" alt="Intro Image">
+    <h1 id="intro-text">Dominic EA Tech Hub    <form class="form" id="contactForm" action="https://formspree.io/f/xdaladgg" method="POST"></form></h1>
+    <div class="intro-subtitle" id="intro-subtitle"></div>
+    <div class="intro-loader">
+      <div class="loader-dot"></div>
+      <div class="loader-dot"></div>
+      <div class="loader-dot"></div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div id="main">
+
+<header class="hero">
+  <h1>Dominic EA Tech Hub</h1>
+  <p>Web & Mobile Solutions for Modern Businesses and Personal blogs</p>
+  <div class="hero-buttons">
+    <a href="#contact" class="btn primary">Begin your Inquiry</a>
+    <a href="#services" class="btn secondary">Our Services</a>
+  </div>
+</header>
+
+<nav class="navbar">
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="nav-menu" id="navMenu">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#process">Process</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section id="about" class="section">
+  <h2>About</h2>
+  <div class="about-box">
+    <img src="images/Image ve.jpeg">
+    <p>
+      Dominic EA Tech Hub is a tech brand focused on building
+      professional websites and mobile applications. We design and build custom websites and mobile apps that help creators, businesses and schools grow and sell online. Our mission is
+      to help ideas become real digital products, fast and efficiently at low cost but premium quality.
+    </p> 
+    <p> Contact us today to start your project, Your satisfaction is our priority.</p>
+  </div>
+</section>
+
+<section id="services" class="section alt">
+  <h2>Services</h2>
+  <p> Click on the card for more details</p>
+  <div class="grid">
+    <a href="service-web-development.html" class="card">Website Development</a>
+    <a href="service-mobile-app.html" class="card">Mobile App Development</a>
+    <a href="service-ui-ux.html" class="card">UI/UX Design</a>
+    <a href="service-maintenance.html" class="card">Redesign & Maintenance</a>
+  </div>
+</section>
+
+<!-- display grid -->
+<section id="process" class="section">
+  <h2>How We Work</h2>
+
+  <div class="process-grid">
+    <div class="process-card">
+      <h3>Consultation</h3>
+      <p>We understand your goals, ideas, and target audience.</p>
+    </div>
+
+    <div class="process-card">
+      <h3>Design</h3>
+      <p>We craft modern, user-friendly UI/UX designs.</p>
+    </div>
+
+    <div class="process-card">
+      <h3>Development</h3>
+      <p>We build fast, scalable and secure solutions.</p>
+    </div>
+
+    <div class="process-card">
+      <h3>Testing</h3>
+      <p>We test across devices for performance and quality.</p>
+    </div>
+
+    <div class="process-card">
+      <h3>Launch</h3>
+      <p>Your product goes live with full support.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- PORTFOLIO SLIDER -->
+<section id="portfolio" class="section alt">
+  <h2>Our Projects</h2>
+
+  <div class="slider">
+    <button class="slide-btn" onclick="prevSlide()">❮</button>
+
+    <div class="slides">
+      <div class="slide">
+        <img src="images/Personal blog.jpeg">
+        <h4>Personal Websites</h4>
+        <small> Author / writers websites</small> <br>
+        <small> Personal Blogs</small> <br>
+        <small> Many More!!</small>
+
+      </div>
+      <div class="slide">
+        <img src="images/project 2.jpeg">
+        <h4>Mobile App</h4>
+      </div>
+
+      
+      </div>
+      <div class="slide">
+        <img src="images/business.jpeg">
+        <h4>Mobile App</h4>
+      </div>
+
+      <div class="slide">
+        <img src="images/School.jpeg">
+        <h4>School Systems</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2>Request a Quote!</h2>
+
+  <form class="form" id="contactForm" action="https://formspree.io/f/mnjbjzvq" method="POST">
+    <!-- FormSubmit Configuration -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://yourdomain.com/success">
+    <input type="hidden" name="subject" value="New Project Inquiry from EA Tech Hub">
+    
+    <!-- Security: Honeypot field (hidden from users, catches bots) -->
+    <input type="text" name="website" placeholder="Website" style="display:none; position:absolute; left:-9999px;">
+    
+    <!-- CSRF Token -->
+    <input type="hidden" name="_csrf" value="ea-tech-hub-2026">
+
+    <div class="form-row">
+      <input type="text" name="name" placeholder="Your Name" minlength="2" maxlength="100" required>
+      <input type="email" name="email" placeholder="Your Email" maxlength="254" required>
+    </div>
+    <textarea name="message" placeholder="Describe your project or idea" minlength="10" maxlength="1000" required></textarea>
+    <button type="submit" class="primary" id="submitBtn">Submit</button>
+  </form>
+
+  <div id="successMessage" class="success-message">
+    <h3>✓ Your Request has been submitted</h3>
+    <p>The team will back to you</p>
+  </div>
+<section class="location-section">
+  <div class="location-card">
+    
+    <div class="location-text">
+      <h3>📍 Our Location</h3>
+      <p>Dominic EA Tech Hub</p>
+      <p> Faculty of Computing</p>
+      <p>University of Calabar</p>
+      <p>Cross Rivers State, Nigeria</p>
+    </div>
+<div class="location-map">
+  <iframe
+    src="https://www.google.com/maps?q=University%20of%20Calabar,%20Cross%20River,%20Nigeria&output=embed"
+    style="width:100%; height:220px; border:0; border-radius:15px;"
+    loading="lazy">
+  </iframe>
+</div>
+
+
+  </div>
+</section>
+<br>
+  <p>Follow us on social media</p>
+  <div class="socials">
+    <a href="https://www.instagram.com/ea_dominic?igsh=cXczMTUxc3l4Nnhy" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="https://x.com/elijah_dom28623" target="_blank" rel="noopener noreferrer">X</a>
+    <a href="https://www.facebook.com/dominic.ea.2025" target="_blank" rel="noopener noreferrer">Facebook</a>
+    <a href="https://vm.tiktok.com/ZS91e8Mk7MaAn-ltdTX/" target="_blank" rel="noopener noreferrer">TikTok</a>
+    <a href="javascript:void(0);" id="whatsappLink" rel="noopener noreferrer">WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Dominic EATech Hub</p>
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,9 +1,75 @@
-// INTRO
+// INTRO ANIMATION
 const intro = document.getElementById("intro");
 const introText = document.getElementById("intro-text");
+const introSubtitle = document.getElementById("intro-subtitle");
+const main = document.getElementById("main");
 
-setTimeout(() => introText.textContent = "Experience Premium services", 2000);
-setTimeout(() => intro.classList.add("hide"), 4000);
+// Add animation class to intro elements
+introText.style.animation = "slideInDown 0.8s ease-out";
+
+// Typewriter effect for subtitle
+const words = ["Experience Premium services", "Build Your Digital Future"];
+let wordIndex = 0;
+let charIndex = 0;
+
+function typeWriter() {
+  const currentWord = words[wordIndex];
+  if (charIndex < currentWord.length) {
+    introSubtitle.textContent += currentWord[charIndex];
+    charIndex++;
+    setTimeout(typeWriter, 50);
+  } else {
+    setTimeout(() => {
+      // Erase the text
+      eraseText();
+    }, 2000);
+  }
+}
+
+function eraseText() {
+  if (charIndex > 0) {
+    introSubtitle.textContent = introSubtitle.textContent.slice(0, -1);
+    charIndex--;
+    setTimeout(eraseText, 30);
+  } else {
+    wordIndex = (wordIndex + 1) % words.length;
+    setTimeout(typeWriter, 500);
+  }
+}
+
+// Start typewriter after intro text appears
+setTimeout(() => {
+  typeWriter();
+}, 500);
+
+// Hide intro after 5.5 seconds and enable page scrolling
+setTimeout(() => {
+  intro.style.animation = "fadeOut 1s ease-out forwards";
+  setTimeout(() => {
+    intro.classList.add("hide");
+    main.classList.add("visible");
+    document.body.classList.add("intro-complete");
+  }, 1000);
+}, 5500);
+
+// HAMBURGER MENU
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+
+hamburger.addEventListener("click", ()=>{
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("mobile");
+  navMenu.classList.toggle("active");
+});
+
+// Close menu when link is clicked
+document.querySelectorAll("nav a").forEach(link=>{
+  link.addEventListener("click", ()=>{
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+    navMenu.classList.remove("mobile");
+  });
+});
 
 // SMOOTH SCROLL
 document.querySelectorAll("nav a").forEach(link=>{
@@ -54,11 +120,65 @@ function nextProcess(){ currentProcess=(currentProcess+1)%processSlides.length; 
 function prevProcess(){ currentProcess=(currentProcess-1+processSlides.length)%processSlides.length; showProcess(currentProcess);}
 setInterval(nextProcess,4000);
 
+// =========================================================
+// SECURITY FUNCTIONS
+// =========================================================
+
+// EmailJS Configuration
+emailjs.init("IA1BLdP_J7dT0XkHc"); // Public key for web3forms
+
+// CONTACT FORM - SIMPLE & WORKING
+const contactForm = document.getElementById("contactForm");
+const successMessage = document.getElementById("successMessage");
+const submitBtn = document.getElementById("submitBtn");
+const whatsappLink = document.getElementById("whatsappLink");
+
+// Hide phone number - only reveal on click via JavaScript
+if(whatsappLink) {
+  whatsappLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    const phoneNum = "2347039074576";
+    window.open(`https://wa.me/+${phoneNum}`, "_blank");
+  });
+}
+
+if(contactForm) {
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    
+    // Show success message immediately
+    if(successMessage) {
+      successMessage.style.display = "block";
+      successMessage.classList.add("show");
+    }
+    contactForm.style.display = "none";
+    submitBtn.disabled = true;
+    
+    try {
+      // Send form data to Formspree
+      const formData = new FormData(contactForm);
+      await fetch(contactForm.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      console.log("Email sent successfully!");
+    } catch(error) {
+      console.error("Error sending email:", error);
+    }
+  });
+}
+
 // EMAIL FORM
-const contactForm=document.getElementById("contact-form");
-contactForm.addEventListener("submit",function(e){
-  e.preventDefault();
-  emailjs.sendForm("YOUR_SERVICE_ID","YOUR_TEMPLATE_ID",this)
-  .then(()=>{ alert("Message sent successfully!"); contactForm.reset(); },
-        ()=>{ alert("Failed to send message"); });
-});
+const contactFormEmail=document.getElementById("contact-form");
+if(contactFormEmail) {
+  contactFormEmail.addEventListener("submit",function(e){
+    e.preventDefault();
+    emailjs.sendForm("YOUR_SERVICE_ID","YOUR_TEMPLATE_ID",this)
+    .then(()=>{ alert("Message sent successfully!"); contactFormEmail.reset(); },
+          ()=>{ alert("Failed to send message"); });
+  });
+}

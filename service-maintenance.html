@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Redesign & Maintenance – Dominic EA Tech Hub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+  --primary:#00d9ff;
+  --secondary:#6366f1;
+  --accent:#22c55e;
+  --bg:#050814;
+  --card:rgba(255,255,255,0.04);
+  --border:rgba(255,255,255,0.1);
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --radius:14px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  background:
+    radial-gradient(circle at top, rgba(0,217,255,.12), transparent 40%),
+    var(--bg);
+  font-family:"Inter","Segoe UI",sans-serif;
+  color:var(--text);
+}
+
+.service-page{
+  max-width:1150px;
+  margin:auto;
+  padding:90px 20px 60px;
+}
+
+/* Back */
+.back-link{
+  position:fixed;
+  top:20px;
+  left:20px;
+  padding:10px 18px;
+  background:rgba(255,255,255,.05);
+  border:1px solid var(--border);
+  border-radius:30px;
+  text-decoration:none;
+  color:var(--primary);
+  backdrop-filter:blur(10px);
+}
+
+/* Hero */
+h1{
+  font-size:3rem;
+  font-weight:800;
+  background:linear-gradient(90deg,var(--primary),var(--secondary));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.subtitle{
+  max-width:750px;
+  margin:20px 0 60px;
+  color:var(--muted);
+  font-size:1.05rem;
+}
+
+/* Sections */
+.service-section{
+  background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.01));
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:40px;
+  margin-bottom:35px;
+  box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+
+.service-section h3{
+  color:var(--primary);
+  margin-bottom:15px;
+  font-size:1.5rem;
+}
+
+.service-section p{
+  color:var(--muted);
+  line-height:1.7;
+}
+
+/* Grid */
+.service-features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
+  margin-top:25px;
+}
+
+.feature-box{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:25px;
+  transition:.4s;
+}
+
+.feature-box:hover{
+  transform:translateY(-8px);
+  border-color:var(--primary);
+}
+
+.feature-box h4{
+  color:var(--primary);
+  margin-bottom:10px;
+}
+
+/* List */
+ul{margin-top:20px;padding-left:20px}
+li{margin-bottom:10px;color:var(--muted)}
+
+/* CTA */
+.cta{
+  text-align:center;
+  padding:80px 30px;
+  background:linear-gradient(180deg,rgba(0,217,255,.12),rgba(0,0,0,.4));
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+}
+
+.cta h3{font-size:2rem;color:var(--primary)}
+.cta p{color:var(--muted);margin:15px 0 30px}
+
+.cta-button{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  padding:16px 45px;
+  border-radius:40px;
+  color:white;
+  text-decoration:none;
+  font-weight:700;
+  transition:.4s;
+}
+
+.cta-button:hover{
+  box-shadow:0 0 40px rgba(0,217,255,.6);
+  transform:scale(1.05);
+}
+
+/* Mobile */
+@media(max-width:768px){
+  h1{font-size:2.2rem}
+  .service-section{padding:25px}
+}
+</style>
+</head>
+
+<body>
+
+<a href="Home.html" class="back-link">← Home</a>
+
+<div class="service-page">
+
+<h1>Redesign & Maintenance</h1>
+<p class="subtitle">
+We modernize, optimize and protect your digital products so they remain fast, secure and competitive.
+</p>
+
+<div class="service-section">
+<h3>What We Do</h3>
+<p>
+We help businesses upgrade outdated websites, improve user experience and keep platforms running at peak performance through continuous maintenance and optimization.
+</p>
+</div>
+
+<div class="service-section">
+<h3>Redesign Services</h3>
+<div class="service-features">
+  <div class="feature-box"><h4>UI Modernization</h4><p>Fresh, modern visuals that improve engagement.</p></div>
+  <div class="feature-box"><h4>User Experience</h4><p>Optimized navigation and interaction flow.</p></div>
+  <div class="feature-box"><h4>Technology Upgrade</h4><p>Migration to faster and safer frameworks.</p></div>
+  <div class="feature-box"><h4>Feature Expansion</h4><p>Adding new business-driven functionality.</p></div>
+</div>
+</div>
+
+<div class="service-section">
+<h3>Maintenance Services</h3>
+<div class="service-features">
+  <div class="feature-box"><h4>Security Updates</h4><p>Continuous vulnerability protection.</p></div>
+  <div class="feature-box"><h4>Performance Optimization</h4><p>Speed and stability monitoring.</p></div>
+  <div class="feature-box"><h4>Bug Fixes</h4><p>Rapid resolution of issues.</p></div>
+  <div class="feature-box"><h4>Content Management</h4><p>Keeping information current.</p></div>
+  <div class="feature-box"><h4>Backups</h4><p>Disaster recovery and data protection.</p></div>
+  <div class="feature-box"><h4>Reports</h4><p>Performance tracking and insights.</p></div>
+</div>
+</div>
+
+<div class="service-section">
+<h3>Why Clients Choose Us</h3>
+<ul>
+<li>Proactive system monitoring</li>
+<li>Enterprise-grade security</li>
+<li>Fast response times</li>
+<li>Clear reporting & transparency</li>
+<li>Affordable long-term plans</li>
+</ul>
+</div>
+
+<div class="cta">
+<h3>Protect & Upgrade Your Platform</h3>
+<p>Let us handle the technical side while you focus on growing your business.</p>
+<a href="Home.html#contact" class="cta-button">Start Maintenance</a>
+</div>
+
+</div>
+
+</body>
+</html>
